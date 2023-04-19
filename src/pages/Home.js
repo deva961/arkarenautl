@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from "react";
-import { latest_news, sliders, smartways } from "../constants";
+import { sliders } from "../constants";
 import { Link } from "react-router-dom";
 import Car from "../components/car/Car";
-import Section from "../components/section/Section";
+import Footer from "../components/Footer/Footer";
 const Header = lazy(() => import("../components/Header/Header"));
 const Slider = lazy(() => import("../components/slider/Slider"));
 function Home() {
@@ -13,13 +13,14 @@ function Home() {
       <LookingFor />
       <Drive />
       <div className="space-y-10 lg:space-y-2 mt-10 lg:mt-2">
-        <Section
+        {/* <Section
           heading={"THE SMARTER WAY TO EXPLORE RENAULT"}
           data={smartways}
-        />
+        /> */}
 
-        <Section heading={"LATEST AT RENAULT"} data={latest_news} />
+        {/* <LatestSection heading={"LATEST AT RENAULT"} data={latest_news} /> */}
       </div>
+      <Footer />
     </Suspense>
   );
 }

@@ -1,15 +1,15 @@
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import { Link } from "react-router-dom";
 
 function Card({ item }) {
-  console.log(item.group);
   return (
     <div key={item.id}>
       <img src={item?.img} className="mb-3" alt={item?.id} />
       <p
         className={`${
-          item.group === "smart" ? "text-normal" : "text-xl"
-        } font-bold tracking-normal`}
+          item.group === "smart" ? "text-normal" : "text-lg"
+        } font-bold tracking-normal uppercase`}
       >
         {item?.title}
       </p>
@@ -19,18 +19,27 @@ function Card({ item }) {
           <p className="text-xs font-normal mb-7 tracking-wide">{item?.desc}</p>
         </>
       )}
-      <div>
-        <Link
-          to={item?.link}
-          className={`${
-            item.group === "smart"
-              ? "bg-black hover:bg-secondary duration-200 hover:text-black px-5 py-2 text-sm text-white  lowercase"
-              : ""
-          } font-semibold text-black`}
-        >
-          {item?.btn_txt}
-        </Link>
-      </div>
+      {item?.group === "smart" && (
+        <div>
+          <Link
+            to={item?.link}
+            className="font-semiboldlowercase bg-black hover:text-black px-5 py-2 text-sm hover:bg-secondary duration-200  text-white"
+          >
+            {item?.btn_txt}
+          </Link>
+        </div>
+      )}
+
+      {item?.group === "latest" && (
+        <div>
+          <Link to={item?.link} className="font-semibold text-black">
+            <div className="flex items-center justify-start">
+              {item?.btn_txt}
+              <ChevronRightIcon className="h-4 w-6 font-semibold text-secondary" />
+            </div>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

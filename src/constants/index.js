@@ -80,4 +80,12 @@ export const latest_news = [
     img: require("../assets/images/grid-1.webp"),
     btn_txt: "know more",
   },
+  {
+    id: 1,
+    group: "latest",
+    title: "Get your Renault ready for the summers with exciting benefits.",
+    link: "https://www.renault.co.in/renault-summer-camp-april-2023.html",
+    img: require("../assets/images/grid-1.webp"),
+    btn_txt: "know more",
+  },
 ];
