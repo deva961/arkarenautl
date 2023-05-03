@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
+import InterestSvg from "../../assets/images/svg/interest.svg";
 import {
   Bars3CenterLeftIcon,
   ChatBubbleLeftRightIcon,
@@ -158,10 +159,7 @@ function Header() {
       />
 
       <header className="relative bg-black">
-        <nav
-          aria-label="Top"
-          className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8"
-        >
+        <nav aria-label="Top" className="mx-10 px-4 py-5 sm:px-6 lg:px-8">
           <>
             <div className="flex h-16 items-center">
               {/* Logo */}
@@ -306,7 +304,7 @@ function Header() {
                     to={"/"}
                     className="flex items-center flex-col text-gray-100 hover:text-gray-800"
                   >
-                    <ChatBubbleLeftRightIcon className="h-4 w-4" />
+                    <img src={InterestSvg} alt="" />
                     <p className="text-xs">contact us</p>
                   </Link>
                 </div>

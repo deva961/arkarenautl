@@ -16,7 +16,7 @@ function Detail() {
   }, [id]);
 
   const tabs = [
-    "Kwid",
+    car?.name.split(" ")[1],
     "safety",
     "features",
     "desgin",
@@ -66,8 +66,8 @@ function Detail() {
         alt=""
       />
       {activeTab === 0 && <MainSection car={car} />}
-      {activeTab === 1 && <Safety />}
-      {activeTab === 4 && <Engine />}
+      {activeTab === 1 && <Safety car={car} />}
+      {activeTab === 4 && <Engine car={car} />}
 
       <Footer />
     </Suspense>

@@ -32,20 +32,14 @@ function MainSection({ car }) {
           />
         </div>
         <div className="col-span-2 space-y-5">
-          <p className="font-bold text-2xl">LET THE WORLD TAKE NOTICE</p>
-          <p className="text-sm font-light max-w-sm w-full ">
-            Be it the SUV-inspired details or a dual tone look, Kwid never fails
-            to impress. The interiors redefine superlative comfort and
-            futuristic technology without missing out on a line-up of advanced
-            safety features. No wonder, it’s the favourite hatchback of the
-            generation.
-          </p>
-          <div className="flex">
+          <p className="font-bold text-2xl">{car?.ptitle}</p>
+          <p className="text-sm font-light max-w-sm w-full ">{car?.pdesc}</p>
+          <div className="flex ">
             <Link
               to={"/"}
-              className="bg-black font-semibold text-white px-4 py-2 flex items-center space-x-3"
+              className="bg-black font-semibold text-white px-4 py-2 flex items-center space-x-3 mx-auto md:ml-1"
             >
-              <p>explore gallery</p>
+              explore gallery
             </Link>
           </div>
         </div>
