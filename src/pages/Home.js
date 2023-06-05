@@ -1,22 +1,24 @@
 import React, { Suspense, lazy } from "react";
-import { sliders } from "../constants";
+import { sliders, smartways } from "../constants";
 import { Link } from "react-router-dom";
 import Car from "../components/car/Car";
 import Footer from "../components/Footer/Footer";
+import Loading from "../components/loading/Loading";
 const Header = lazy(() => import("../components/Header/Header"));
 const Slider = lazy(() => import("../components/slider/Slider"));
+const Section = lazy(() => import("../components/section/Section"));
 function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading />}>
       <Header />
       <Slider sliders={sliders} />
       <LookingFor />
       <Drive />
       <div className="space-y-10 lg:space-y-2 mt-10 lg:mt-2">
-        {/* <Section
+        <Section
           heading={"THE SMARTER WAY TO EXPLORE RENAULT"}
           data={smartways}
-        /> */}
+        />
 
         {/* <LatestSection heading={"LATEST AT RENAULT"} data={latest_news} /> */}
       </div>
@@ -33,7 +35,7 @@ const LookingFor = () => {
       </p>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 max-w-4xl mx-auto my-6 xl:my-9 lg:px-0 px-5">
         <div className="col-span-1 border border-px py-3">
-          <Link to={"/"} className="flex items-center justify-center space-x-3">
+          <Link to={"/renault-car-test-drive"} className="flex items-center justify-center space-x-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 30 30"

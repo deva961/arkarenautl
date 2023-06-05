@@ -1,19 +1,28 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import MainSection from "../components/detail/MainSection";
-import Safety from "../components/detail/Safety";
-import Engine from "../components/detail/Engine";
 import { carSpecs } from "../constants/specs";
+import { Helmet } from "react-helmet";
+import Loading from "../components/loading/Loading";
 const Header = lazy(() => import("../components/Header/Header"));
 const Footer = lazy(() => import("../components/Footer/Footer"));
+const MainSection = lazy(() => import("../components/detail/MainSection"));
+const Design = lazy(() => import("../components/detail/Design"));
+const Featured = lazy(() => import("../components/detail/Featured"));
+const Safety = lazy(() => import("../components/detail/Safety"));
+const Engine = lazy(() => import("../components/detail/Engine"));
+const Specification = lazy(() => import("../components/detail/Specification"));
 
 function Detail() {
   const { pathname } = useLocation();
+
   const [car, setCar] = useState();
-  const id = pathname.split("/")[1];
+  const id = pathname.split("/")[2];
   useEffect(() => {
+    document.title = `${car?.name} On Road Price in Hyderabad | ${
+      car?.name.split(" ")[1]
+    } Offers Hyderabad`;
     carSpecs?.forEach((item) => item.id === id && setCar(item));
-  }, [id]);
+  }, [id, car]);
 
   const tabs = [
     car?.name.split(" ")[1],
@@ -21,13 +30,33 @@ function Detail() {
     "features",
     "desgin",
     "engine",
-    "price",
-    "specifications",
+    // "price",
+    // "specifications",
   ];
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading />}>
       <Header />
+      <Helmet>
+        {car?.name === "Renault Kiger" && (
+          <meta
+            name="description"
+            content="Renault Kwid on road price in Hyderabad. Arka Renault offers best deals on Kwid. Visit us today to know more offers on Kwid. Renault Kwid most selling Hatchback. Reanult Kwid test drive today."
+          />
+        )}
+        {car?.name === "Renault Kwid" && (
+          <meta
+            name="description"
+            content="Renault Kiger on road price in Hyderabad. Arka Renault offers best deals on Kiger. Visit us today to know more offers on Kiger. Renault Kiger most selling SUV. Reanult Kiger test drive today."
+          />
+        )}
+        {car?.name === "Renault Triber" && (
+          <meta
+            name="description"
+            content="Renault Triber on road price in Hyderabad. Arka Renault offers best deals on Triber. Visit us today to know more offers on Triber. Renault Triber most selling MUV. Reanult Triber test drive today."
+          />
+        )}
+      </Helmet>
       <div className="flex items-center justify-between px-4">
         <div className="section-1 flex flex-row space-x-5 bg-white overflow-y-auto">
           {tabs.map((item, index) => (
@@ -67,7 +96,10 @@ function Detail() {
       />
       {activeTab === 0 && <MainSection car={car} />}
       {activeTab === 1 && <Safety car={car} />}
+      {activeTab === 2 && <Featured car={car} />}
+      {activeTab === 3 && <Design car={car} />}
       {activeTab === 4 && <Engine car={car} />}
+      {activeTab === 6 && <Specification car={car} />}
 
       <Footer />
     </Suspense>

@@ -29,24 +29,36 @@ export const sliders = [
   },
 ];
 
+export const feature_kwid_slider = [
+  {
+    desktop: require("../assets/images/kwid/slider/1.webp"),
+  },
+  {
+    desktop: require("../assets/images/kwid/slider/2.webp"),
+  },
+  {
+    desktop: require("../assets/images/kwid/slider/3.webp"),
+  },
+];
+
 export const cars = [
   {
     id: 1,
     name: "kwid",
     img: require("../assets/images/mobile_images/kwid.png"),
-    link: "/renault-kwid",
+    link: "renault-kwid",
   },
   {
     id: 2,
     name: "triber",
     img: require("../assets/images/mobile_images/triber.png"),
-    link: "/renault-triber",
+    link: "renault-triber",
   },
   {
     id: 3,
     name: "kiger",
     img: require("../assets/images/mobile_images/kiger.png"),
-    link: "/renault-kiger",
+    link: "renault-kiger",
   },
 ];
 
@@ -89,3 +101,23 @@ export const latest_news = [
     btn_txt: "know more",
   },
 ];
+
+
+
+export const triber_design_slider = [
+  {
+    desktop: require("../assets/images/triber/21.webp"),
+  },
+  {
+    desktop: require("../assets/images/triber/20.webp"),
+  },
+  {
+    desktop: require("../assets/images/triber/23.webp"),
+  },
+  {
+    desktop: require("../assets/images/triber/24.webp"),
+  },
+  {
+    desktop: require("../assets/images/triber/25.webp"),
+  },
+]

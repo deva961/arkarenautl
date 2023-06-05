@@ -1,13 +1,19 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB4vee6pYCvhfm6x-HYkJmXfNsVKGsmuPk",
-  authDomain: "arkarenault-277a7.firebaseapp.com",
-  projectId: "arkarenault-277a7",
-  storageBucket: "arkarenault-277a7.appspot.com",
-  messagingSenderId: "766748457861",
-  appId: "1:766748457861:web:39d2bd4b818e3ecac9a2ec",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_SENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const storage = getStorage(app);
+export const db = getFirestore(app);
+

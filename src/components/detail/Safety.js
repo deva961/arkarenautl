@@ -10,7 +10,7 @@ function Safety({ car }) {
           safety in the spot light
         </h1>
         <p className="font-medium text-base sm:text-lg uppercase">
-          Renault Kwid
+          {car?.name}
         </p>
       </div>
 
@@ -30,13 +30,10 @@ function Safety({ car }) {
       </div>
 
       <div className="text-center my-5 max-w-2xl mx-auto">
-        <h1 className="uppercase font-semibold text-2xl">SAFE MODE: ON</h1>
-        <p className="text-sm mt-2">
-          Being inspired by an SUV, it comes as no surprise that Kwid is adept
-          at safety as well. Complementing its sturdy build are the latest BS6.2
-          features that work in the background to protect you from potential
-          threats.
-        </p>
+        <h1 className="uppercase font-semibold text-2xl">
+          {car?.safety_title}
+        </h1>
+        <p className="text-sm mt-2">{car?.safety_desc}</p>
       </div>
       <div className="max-w-7xl mx-auto mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

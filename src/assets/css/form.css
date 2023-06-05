@@ -1,0 +1,4 @@
+input:focus + .label,
+input:not(:placeholder-shown) + .label {
+  transform: translateY(-27px);
+}

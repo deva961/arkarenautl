@@ -87,13 +87,10 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                           </Link>
 
                           <Link
-                            to={"/"}
+                            to={"/car-offers"}
                             className="flex items-center justify-between focus:outline-none outline-none uppercase mb-7 text-sm font-semibold tracking-wide"
                           >
                             <p>Offers</p>
-                            <p>
-                              <ChevronRightIcon className="h-4 w-4" />
-                            </p>
                           </Link>
 
                           <Link
@@ -138,7 +135,7 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                               {car === true &&
                                 cars?.map((item) => (
                                   <Link
-                                    to={item.link}
+                                    to={`/listings/${item.link}`}
                                     className="flex items-center w-full px-4 mb-1"
                                     key={item.id}
                                   >
