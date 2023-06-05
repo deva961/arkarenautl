@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { CgSpinner } from "react-icons/cg";
-import Sidebar from '../../../components/admin/Sidebar'
-import Navbar from '../../../components/admin/Navbar'
+import Sidebar from "../../../components/admin/Sidebar";
+import Navbar from "../../../components/admin/Navbar";
 import DataTable from "react-data-table-component";
 import { useMemo } from "react";
 import { db } from "../../../firebase";
-// import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
+import moment from "moment";
 
 const customStyles = {
   rows: {
@@ -18,8 +19,8 @@ const customStyles = {
     style: {
       paddingLeft: "8px", // override the cell padding for head cells
       paddingRight: "8px",
-      backgroundColor: "#7e22ce",
-      color: "white",
+      backgroundColor: "#efdf00",
+      color: "black",
       fontSize: "15px",
     },
   },
@@ -51,13 +52,15 @@ function Leads() {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
 
+  console.log(data)
+
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
       let list = [];
       try {
-        const collectionRef = collection(db, "enquiries");
-        const q = query(collectionRef, orderBy("timestamp", "desc"));
+        const collectionRef = collection(db, "leads");
+        const q = query(collectionRef, orderBy('timestamp', 'desc'), limit(100));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
           list.push({ id: doc.id, ...doc.data() });
@@ -66,8 +69,7 @@ function Leads() {
         });
         setLoading(false);
       } catch (error) {
-        console.log(error)
-        // toast.error("Something went wrong!");
+        toast.error("Something went wrong!");
       }
     };
     fetchData();
@@ -84,8 +86,12 @@ function Leads() {
       selector: (row) => row.id,
     },
     {
-      name: "Name",
-      selector: (row) => row.name,
+      name: "First Name",
+      selector: (row) => row.firstName,
+    },
+    {
+      name: "Last Name",
+      selector: (row) => row.lastName,
     },
     {
       name: "Email",
@@ -97,19 +103,18 @@ function Leads() {
     },
     {
       name: "Model",
-      selector: (row) => row.model,
-    },
-    {
-      name: "Description",
-      selector: (row) => row.message,
-    },
-    {
-      name: "Pickup",
-      selector: (row) => row.pickup,
+      selector: (row) =>
+        row.model === "1"
+          ? "Kwid"
+          : row.model === "2"
+          ? "Triber"
+          : row.model === "3"
+          ? "Kiger"
+          : "popup",
     },
     {
       name: "Date",
-      selector: (row) => row.timestamp,
+      selector: (row) => moment(row.timestamp.toDate().toString()).calendar(),
     },
   ];
 
@@ -157,8 +162,9 @@ function Leads() {
   useEffect(() => {
     const result = data?.filter(
       (item) =>
-        item.phone.toLowerCase().includes(search.toLowerCase()) ||
-        item.name.toLowerCase().includes(search.toLowerCase()) ||
+        item.phone.includes(search.toLowerCase()) ||
+        item.firstName.toLowerCase().includes(search.toLowerCase()) ||
+        item.lastName.toLowerCase().includes(search.toLowerCase()) ||
         item.email.toLowerCase().includes(search.toLowerCase())
     );
     setFilteredData(result);

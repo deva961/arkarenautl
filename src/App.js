@@ -1,11 +1,12 @@
 import React, { Suspense, lazy, useContext, useEffect, useState } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 import Detail from "./pages/Detail";
 import Popup from "./components/popup/Popup";
 import Loading from "./components/loading/Loading";
 import { AuthContext } from "./context/AuthContext";
 import TestDrive from "./pages/forms/TestDrive";
+import Thankyou from "./pages/Thankyou";
 const Home = lazy(() => import("./pages/Home"));
 const Leads = lazy(() => import("./pages/admin/leads/Leads"));
 const Login = lazy(() => import("./pages/admin/auth/Login"));
@@ -18,7 +19,7 @@ function App() {
     return currentUser ? children : <Navigate to="/" />;
   };
 
-  const [open,setOpen] = useState(true)
+  const [open, setOpen] = useState(true);
 
   const ScrollTop = () => {
     const { pathname } = useLocation();
@@ -32,14 +33,15 @@ function App() {
       <ScrollTop />
       <Toaster />
       <div className="block md:block">
-        <Popup open={open} setOpen={setOpen}/>
+        <Popup open={open} setOpen={setOpen} />
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" index element={<Home />} />
-            <Route path="/listings/:id"  element={<Detail />} />
+            <Route path="/listings/:id" element={<Detail />} />
             <Route path="/car-offers" element={<Zone />} />
             <Route path="/offers/:id" element={<Offers />} />
             <Route path="/renault-car-test-drive" element={<TestDrive />} />
+            <Route path="/thank-you" element={<Thankyou />} />
             <Route
               path="*"
               element={<div className="text-center">404 | Not Found </div>}

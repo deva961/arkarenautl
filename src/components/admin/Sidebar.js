@@ -29,7 +29,7 @@ function Sidebar({ active }) {
           to="/admin/dashboard"
           className={`${
             activeScreen === "/admin/dashboard"
-              ? "text-white bg-secondary"
+              ? "text-black bg-secondary"
               : "text-gray-500"
           } flex items-center p-4 `}
         >
@@ -43,7 +43,7 @@ function Sidebar({ active }) {
           to="/admin/leads"
           className={`${
             activeScreen === "/admin/leads"
-              ? "text-white bg-secondary"
+              ? "text-black bg-secondary"
               : "text-gray-500"
           } flex items-center p-4 `}
         >

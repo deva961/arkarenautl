@@ -33,7 +33,7 @@ function TestDrive() {
           lastName,
           email,
           phone,
-          veh,
+          model: veh,
         });
         navigate("/thank-you");
       } catch (error) {

@@ -122,7 +122,7 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                             </button>
                             <div className="bg-white grow w-full text-black">
                               <button
-                                onClick={(e) => setCar(!car)}
+                                onClick={() => setCar(!car)}
                                 className="flex items-center justify-between w-full px-4 py-4  text-sm tracking-wide mb-7 "
                               >
                                 <p>Cars</p>
@@ -166,7 +166,7 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                               </Link>
 
                               <Link
-                                to={"/"}
+                                to={"/renault-car-test-drive"}
                                 className="flex items-center justify-start w-full px-4 mb-4 text-gray-600 text-xs font-semibold tracking-wide"
                               >
                                 <p>

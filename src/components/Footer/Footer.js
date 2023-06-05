@@ -140,6 +140,20 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      <div className="bg-gray-100  text-sm">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-between p-3">
+            <div className="flex items-center space-x-3">
+              <Link to={"/"}>privacy policy</Link>
+              <div className="h-5 w-px bg-gray-400"></div>
+              <Link to={"/"}>terms & conditions</Link>
+            </div>
+
+            <p>All rights reserved by Arka Renault</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

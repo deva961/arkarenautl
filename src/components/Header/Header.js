@@ -1,12 +1,12 @@
 import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import InterestSvg from "../../assets/images/svg/interest.svg";
-import {
-  Bars3CenterLeftIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3CenterLeftIcon } from "@heroicons/react/24/outline";
+import { HiChevronRight } from "react-icons/hi";
 import MobileHeader from "./MobileHeader";
 import { Link } from "react-router-dom";
-
+import Car from "../car/Car";
+import { carSpecs } from "../../constants/specs";
 const navigation = {
   categories: [
     {
@@ -70,7 +70,7 @@ function Header() {
                                 open
                                   ? "border-secondary text-secondary"
                                   : "border-transparent text-gray-300 hover:text-gray-100",
-                                "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
+                                "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out focus:outline-none outline-none"
                               )}
                             >
                               {category.name}
@@ -86,19 +86,50 @@ function Header() {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500 z-50">
+                            <Popover.Panel className="absolute inset-x-0 top-full text-sm z-50">
                               <div
                                 className="absolute inset-0 top-1/2 bg-white shadow"
                                 aria-hidden="true"
                               />
 
-                              <div className="relative bg-white">
-                                <div className="mx-auto max-w-7xl px-8">
-                                  <div className="flex items-center">
-                                    <div className="flex-1 h-96 bg-black">
-                                      
+                              <div className="relative bg-white p-10">
+                                <div className="flex items-center justify-start">
+                                  <div className="flex-2 space-y-3">
+                                    <div className="flex flex-col">
+                                      <div className="flex items-center">
+                                        <HiChevronRight className="w-5 h-5" />
+                                        <Link to={"/"} className="font-semibold">Book a test drive</Link>
+                                      </div>
                                     </div>
-                                    <div className="flex-1 bg-secondary h-96"></div>
+                                    <div className="flex items-center">
+                                      <HiChevronRight className="w-5 h-5" />
+                                      <Link to={"/"} className="font-semibold">Register a complaint</Link>
+                                    </div>
+                                    <div className="flex items-center">
+                                      <HiChevronRight className="w-5 h-5" />
+                                      <Link to={"/"} className="font-semibold">Faq</Link>
+                                    </div>
+                                  </div>
+                                  <div className="flex-grow flex space-x-5 ml-12">
+                                    <div className="h-48 bg-gray-100 w-px"></div>
+                                    <div className="flex items-center space-x-5 px-7 lg:px-0">
+                                      {carSpecs?.map((item) => (
+                                        <Link
+                                          to={`/listings/${item.id}`}
+                                          key={item.id}
+                                        >
+                                          <img
+                                            src={item.pic}
+                                            className="h-44"
+                                            loading="lazy"
+                                            alt=""
+                                          />
+                                          <p className="text-sm uppercase ml-12">
+                                            {item.name.split(" ")[1]}
+                                          </p>
+                                        </Link>
+                                      ))}
+                                    </div>
                                   </div>
                                 </div>
                               </div>

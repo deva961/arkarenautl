@@ -3,8 +3,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
-// import { CgSpinner } from "react-icons/cg";
-// import { toast } from "react-toastify";
+import { CgSpinner } from "react-icons/cg";
+import { toast } from "react-hot-toast";
 
 function Login() {
   const navigate = useNavigate();
@@ -24,18 +24,18 @@ function Login() {
       const errorCode = error.code;
       console.log(errorCode);
       if (errorCode === "auth/user-not-found") {
-        // toast.error("User not found!");
+        toast.error("User not found!");
       }
       if (errorCode === "auth/wrong-password") {
-        // toast.error("Invalid Credentials!");
+        toast.error("Invalid Credentials!");
       }
       if (errorCode === "auth/configuration-not-found") {
-        // toast.error("Something went wrong!");
+        toast.error("Something went wrong!");
       }
       if (errorCode === "auth/too-many-requests") {
-        // toast.error(
-        //   "Access to this account has been temporarily disabled due to many failed login attempts."
-        // );
+        toast.error(
+          "Access to this account has been temporarily disabled due to many failed login attempts."
+        );
       }
     }
     setLoading(false);
@@ -51,7 +51,7 @@ function Login() {
                 <form onSubmit={handleSubmit}>
                   <div className="relative w-full mb-4">
                     <label
-                      className="block font-semibold text-purple-600 text-sm mb-1"
+                      className="block font-semibold text-black text-sm mb-1"
                       htmlFor="grid-password"
                     >
                       Email
@@ -67,7 +67,7 @@ function Login() {
 
                   <div className="relative w-full mb-4">
                     <label
-                      className="block font-semibold text-purple-600 text-sm mb-1"
+                      className="block font-semibold text-black text-sm mb-1"
                       htmlFor="grid-password"
                     >
                       Password
@@ -84,9 +84,9 @@ function Login() {
                       <input
                         id="customCheckLogin"
                         type="checkbox"
-                        className="form-checkbox border-0 rounded text-purple-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
+                        className="form-checkbox border-0 rounded text-black ml-1 w-5 h-5 ease-linear transition-all duration-150"
                       />
-                      <span className="ml-2 text-sm font-semibold text-purple-600">
+                      <span className="ml-2 text-sm font-semibold text-black">
                         Remember me
                       </span>
                     </label>
@@ -94,17 +94,17 @@ function Login() {
 
                   <div className="text-center mt-6">
                     <button
-                      className="bg-purple-700 text-white active:bg-purple-600 text-sm uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                      className="bg-black text-white text-sm uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="submit"
                     >
-                      {/* {loading ? (
+                      {loading ? (
                         <div className="flex items-center justify-center">
                           <CgSpinner className="animate-spin h-5 mr-2 text-white w-5" />
                           Loading...
                         </div>
-                      ) : ( */}
+                      ) : (
                         "sign in"
-                      {/* )} */}
+                      )}
                     </button>
                   </div>
                 </form>

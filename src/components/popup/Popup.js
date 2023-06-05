@@ -2,14 +2,25 @@ import React, { useState, Fragment } from "react";
 import { Transition, Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import toast from 'react-hot-toast'
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../../firebase";
 
 function Popup({ open, setOpen }) {
-  const [number, setNumber] = useState("");
+  const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
-  function handleSubmit(e) {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    const dataCollectionRef = collection(db, "leads");
     setLoading(true);
-    toast.success('something went wrong')
+    try {
+      await addDoc(dataCollectionRef, {
+        phone,
+        timestamp: serverTimestamp()
+      })
+    } catch (error) {
+      toast.error('something went wrong')
+    }
+    setOpen(false)
     setLoading(false);
   }
   return (
@@ -71,10 +82,10 @@ function Popup({ open, setOpen }) {
                           name="Phone"
                           minLength="10"
                           maxLength="10"
-                          value={number}
+                          value={phone}
                           autoComplete="off"
                           onChange={(e) =>
-                            setNumber(
+                            setPhone(
                               e.target.value.replace(/[^1-9 ]/g, "") &&
                                 e.target.value.replace(/ /g, "")
                             )
