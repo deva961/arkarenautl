@@ -28,7 +28,7 @@ function Detail() {
   const tabs = [
     car?.name.split(" ")[1],
     "safety",
-    // "features",
+    "features",
     "design",
     "engine",
     "price",
@@ -75,12 +75,14 @@ function Detail() {
           ))}
         </div>
         <div className="section-2 space-x-2 hidden lg:flex lg:items-center">
-          <Link
-            to={"/"}
+          <a
+            href={car?.pdf}
+            target={"_blank"}
+            rel="noreferrer"
             className="px-4 py-2.5 bg-secondary text-black font-semibold"
           >
             download brochure
-          </Link>
+          </a>
           <Link
             to={"/renault-car-test-drive"}
             className="px-4 py-2.5 border border-gray-700 font-semibold"

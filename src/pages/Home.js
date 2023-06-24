@@ -73,7 +73,7 @@ const LookingFor = () => {
         </div>
 
         <div className="col-span-1 border border-px py-3">
-          <Link to={"/"} className="flex items-center justify-center space-x-3">
+          <Link to={"/renault-cars-hyderabad"} className="flex items-center justify-center space-x-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 30 30"

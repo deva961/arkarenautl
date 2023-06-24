@@ -2,6 +2,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Form from "../../components/form/Form";
 import { Helmet } from "react-helmet";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function Contact() {
   document.title = "Contact Us | Renault Hyderabad | Renault Khammam";
@@ -14,6 +15,7 @@ function Contact() {
         />
       </Helmet>
       <Header />
+      <Breadcrumb title={"Contact Us"}/>
       <Form title={"Contact Us"} />
       <Footer />
     </>

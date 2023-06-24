@@ -28,12 +28,18 @@ function App() {
     return currentUser ? children : <Navigate to="/" />;
   };
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const ScrollTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
       window.scrollTo(0, 0);
+      setTimeout(() => {
+        if (sessionStorage.getItem("popup") !== "true") {
+          setOpen(true);
+          sessionStorage.setItem("popup", "true");
+        }
+      }, 1000);
     }, [pathname]);
     return null;
   };

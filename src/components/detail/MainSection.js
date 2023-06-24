@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import EmiSvg from "../../assets/images/svg/emi.svg";
 import VehicleCard from "../card/VehicleCard";
+import GridDesign from "../GridDesign";
 function MainSection({ car }) {
   return (
     <div className="p-5 max-w-6xl mx-auto">
@@ -39,6 +39,8 @@ function MainSection({ car }) {
         </div>
       </div>
 
+      {car?.design[0] && <GridDesign pics={car?.design[0]?.grid_images} />}
+
       <div className="grid grid-cols-2 gap-2 mt-6 lg:hidden">
         {car?.gallery.map((item, index) => (
           <img src={item} alt={index} key={index} />
@@ -46,15 +48,17 @@ function MainSection({ car }) {
       </div>
 
       <div className="flex items-center justify-center flex-col lg:flex-row space-y-2 lg:space-x-2 lg:space-y-0 mt-5">
-        <Link
-          to={"/"}
+        <a
+          href={car?.pdf}
+          target={"_blank"}
+          rel="noreferrer"
           className="bg-black font-semibold text-white px-5 py-2 text-sm"
         >
           <p>downlaod brochure</p>
-        </Link>
+        </a>
 
         <Link
-          to={"/"}
+          to={"/renault-car-test-drive"}
           className="border-black text-sm border font-semibold text-black px-8 py-2"
         >
           <p>register interest</p>

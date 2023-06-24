@@ -1,32 +1,39 @@
+// export const sliders = [
+//   {
+//     desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
+//     tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
+//     sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
+//     mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
+//     link: "/",
+//   },
+//   {
+//     desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
+//     tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
+//     sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
+//     mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
+//     link: "/",
+//   },
+//   {
+//     desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
+//     tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
+//     sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
+//     mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
+//     link: "/",
+//   },
+//   {
+//     desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
+//     tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
+//     sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
+//     mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
+//     link: "/",
+//   },
+// ];
+
 export const sliders = [
-  {
-    desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
-    tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
-    sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
-    mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
-    link: "/",
-  },
-  {
-    desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
-    tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
-    sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
-    mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
-    link: "/",
-  },
-  {
-    desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
-    tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
-    sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
-    mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
-    link: "/",
-  },
-  {
-    desktop: require("../assets/images/mobile_images/desktop_slider_1.webp"),
-    tab: require("../assets/images/mobile_images/tab_slider_1.webp"),
-    sm: require("../assets/images/mobile_images/sm_slider_1.webp"),
-    mobile: require("../assets/images/mobile_images/mobile_slider_1.webp"),
-    link: "/",
-  },
+  require("../assets/images/mobile_images/desktop_slider_1.webp"),
+  // require("../assets/images/mobile_images/desktop_slider_2.webp"),
+  // require("../assets/images/mobile_images/desktop_slider_3.webp"),
+  // require("../assets/images/mobile_images/desktop_slider_4.webp"),
 ];
 
 export const feature_kwid_slider = [
@@ -102,8 +109,6 @@ export const latest_news = [
   },
 ];
 
-
-
 export const triber_design_slider = [
   {
     desktop: require("../assets/images/triber/21.webp"),
@@ -120,4 +125,4 @@ export const triber_design_slider = [
   {
     desktop: require("../assets/images/triber/25.webp"),
   },
-]
+];

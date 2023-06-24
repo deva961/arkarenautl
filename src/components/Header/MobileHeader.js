@@ -77,7 +77,7 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                           </div>
 
                           <Link
-                            to={"/"}
+                            to={"/finance"}
                             className="flex items-center justify-between focus:outline-none outline-none uppercase mb-7 text-sm font-semibold tracking-wide"
                           >
                             <p>Finance</p>
@@ -94,7 +94,7 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                           </Link>
 
                           <Link
-                            to={"/"}
+                            to={"/contact"}
                             className="flex items-center justify-between focus:outline-none outline-none uppercase mb-7 text-sm font-semibold tracking-wide"
                           >
                             <p>Contact us</p>

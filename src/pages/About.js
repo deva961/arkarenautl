@@ -1,24 +1,14 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import { FaAngleRight } from "react-icons/fa";
+import Breadcrumb from "../components/Breadcrumb";
+
 
 function About() {
   return (
     <>
       <Header />
-      <div className="bg-black w-full p-12 lg:p-20 text-center">
-        <p className=" text-white my-auto uppercase font-semibold text-3xl">
-          About Us
-        </p>
-      </div>
-      {/* <div className="container mx-auto py-5">
-        <div className="flex items-center">
-          <p>Arka Renault</p>
-          <FaAngleRight />
-          <p>About Us</p>
-        </div>
-      </div> */}
+      <Breadcrumb title={'About Us'}/>
 
       <div className="max-w-5xl mx-auto my-10">
         <h2 className="uppercase font-bold text-xl text-center xl:text-4xl">

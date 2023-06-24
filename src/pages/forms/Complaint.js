@@ -1,14 +1,12 @@
 import { Helmet } from 'react-helmet'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import Breadcrumb from '../../components/Breadcrumb'
 
 import React, { useState } from "react";
 import '../../assets/css/form.css'
 import {
   ArrowRightIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  PhoneArrowUpRightIcon,
 } from "@heroicons/react/24/outline";
 import { toast } from "react-hot-toast";
 import { db } from "../../firebase";
@@ -53,12 +51,7 @@ function Complaint() {
   return (
     <>
       <Header />
-      <>
-      <div className="bg-black w-full p-12 lg:p-20 text-center">
-        <p className=" text-white my-auto uppercase font-semibold text-3xl">
-          Register a Complaint
-        </p>
-      </div>
+      <Breadcrumb title={'Register a complaint'}/>
       <div className="container mx-auto">
         <div className="m-5">
           <p className="font-semibold text-lg mb-10 lg:mb-20">
@@ -190,7 +183,6 @@ function Complaint() {
           </form>
         </div>
       </div>
-    </>
       <Footer />
     </>
   )

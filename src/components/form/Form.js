@@ -45,11 +45,7 @@ function Form({title}) {
     };
   return (
     <>
-      <div className="bg-black w-full p-12 lg:p-20 text-center">
-        <p className=" text-white my-auto uppercase font-semibold text-3xl">
-          {title}
-        </p>
-      </div>
+      
       <div className="flex lg:flex-row flex-col-reverse">
         <div className="flex-grow lg:my-16 lg:ml-32 m-5">
           <p className="font-semibold text-lg mb-10 lg:mb-14">

@@ -12,7 +12,7 @@ function Brochure() {
         </p>
       </div>
       <div className="max-w-5xl mx-auto mt-10 xl:mt-20 xl:mb-10">
-        <Car btn_title={"download brochure"} url={`/listings`} />
+        <Car btn_title={"download brochure"} pdf />
       </div>
       <Footer />
     </>

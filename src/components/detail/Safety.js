@@ -15,12 +15,14 @@ function Safety({ car }) {
       </div>
 
       <div className="flex items-center flex-col sm:flex-row justify-center my-10 space-y-4 sm:space-y-0 sm:space-x-4">
-        <Link
-          to={"/"}
+        <a
+          href={car?.pdf}
+          target={'_blank'}
+          rel="noreferrer"
           className="bg-black px-5 py-2.5 font-semibold text-white hover:bg-secondary hover:text-black duration-150"
         >
           download brochure
-        </Link>
+        </a>
         <Link
           to={"/"}
           className="bg-white px-12 sm:px-5 py-2 font-semibold border border-black hover:bg-black hover:text-white duration-150"

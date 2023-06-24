@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "../slider/Slider";
-import { Link } from "react-router-dom";
 import Variants from "./Variants";
+import GridDesign from "../GridDesign";
 
 function Design({ car }) {
   return (
@@ -16,56 +16,61 @@ function Design({ car }) {
       </div>
 
       <div className="flex items-center justify-center my-10">
-        <Link
-          to={"/"}
+        <a
+          href={car?.pdf}
+          target={"_blank"}
           className="bg-black px-5 py-2.5 font-semibold text-white hover:bg-secondary hover:text-black duration-150"
         >
           download brochure
-        </Link>
+        </a>
       </div>
 
-      {car?.name.split(" ")[1] === "Kwid" && (
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-14 lg:px-0 max-w-4xl mx-auto mt-10 sm:mt-20">
-          <div className="col-span-1 hidden lg:block">
-            <img
-              src={car?.gallery[0]}
-              className="w-full object-cover h-full"
-              loading="lazy"
-              alt=""
-            />
-          </div>
-          <div className="col-span-2 space-y-5">
-            <p className="font-bold text-2xl">{car?.ptitle}</p>
-            <p className="text-sm font-light max-w-sm w-full ">{car?.pdesc}</p>
-            <div className="flex ">
+      {/* {car?.name.split(" ")[1] === "Kwid" && ( */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-14 lg:px-0 max-w-4xl mx-auto mt-10 sm:mt-20">
+        <div className="col-span-1 hidden lg:block">
+          <img
+            src={car?.gallery[0]}
+            className="w-full object-cover h-full"
+            loading="lazy"
+            alt=""
+          />
+        </div>
+        <div className="col-span-2 space-y-5">
+          <p className="font-bold text-2xl">{car?.design[0]?.subtitle}</p>
+          <p className="text-sm text-gray-600 max-w-sm w-full ">
+            {car?.design[0]?.desc}
+          </p>
+          {/* <div className="flex ">
               <Link
                 to={"/"}
                 className="bg-black font-semibold text-white px-4 py-2 flex items-center space-x-3 mx-auto md:ml-1"
               >
                 explore gallery
               </Link>
-            </div>
-          </div>
+            </div> */}
         </div>
-      )}
+      </div>
+      {/* )} */}
 
-      {car?.name.split(" ")[1] !== "Kwid" && (
+      <GridDesign pics={car?.design[0]?.grid_images} />
+
+      {car?.name.split(" ")[1] !== "Triber" && (
         <>
-          <div className="text-center my-5 max-w-2xl mx-auto">
-            <h1 className="uppercase font-semibold text-2xl">
-              {car?.design[0]?.subtitle}
-            </h1>
-            <p className="text-sm md:text-base mt-2 mb-10">
-              {car?.design[0]?.desc}
-            </p>
-          </div>
-          <Slider sliders={car?.design[0]?.sliders} />
-          <div className="text-center my-5 max-w-2xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto">
             <h1 className="uppercase font-semibold text-2xl">
               {car?.design[0]?.sec_title}
             </h1>
-            <p className="text-sm md:text-base mt-2">
+            <p className="text-sm text-gray-600 md:text-base mt-2 mb-10">
               {car?.design[0]?.sec_desc}
+            </p>
+          </div>
+          <Slider sliders={car?.design[0]?.sliders} />
+          <div className="text-center my-10 max-w-2xl mx-auto">
+            <h1 className=" font-semibold text-2xl lg:text-4xl">
+              {car?.design[0]?.third_title}
+            </h1>
+            <p className="text-sm md:text-base mt-2">
+              {car?.design[0]?.third_desc}
             </p>
           </div>
         </>
@@ -77,7 +82,10 @@ function Design({ car }) {
         ))}
       </div>
 
-      <Variants variant={car?.variants} />
+      <div className="max-w-5xl mx-auto">
+        <Variants variant={car?.variants} />
+      </div>
+
       {car?.name.split(" ")[1] !== "Kwid" && (
         <>
           <div className="text-center my-5 max-w-2xl mx-auto">

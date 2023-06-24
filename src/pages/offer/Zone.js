@@ -18,7 +18,7 @@ function Zone() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-7 lg:px-0">
           {carSpecs?.map((item) => (
             <div className="col-span-1 w-full" key={item.id}>
-              <Link to={`/offers/${item.id}-offers`}>
+              <Link to={`/offers/${item.id}`}>
                 <img
                   src={item.pic}
                   className="mx-auto "

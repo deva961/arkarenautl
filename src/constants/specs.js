@@ -2,6 +2,7 @@ export const carSpecs = [
   {
     id: "renault-kwid-on-road-price-hyderabad",
     name: "Renault Kwid",
+    pdf: require("../assets/brochures/kwid.pdf"),
     caption: "live for more",
     pic: require("../assets/images/mobile_images/kwid.png"),
     form_pic: require("../assets/images/kwid/24.webp"),
@@ -213,32 +214,26 @@ export const carSpecs = [
 
     design: [
       {
-        title: "BORN TO BE A FAMILY FAVOURITE",
-        subtitle: "SIMPLY A CLASS APART",
-        desc: "Renault Triber stands tall with an impressive stance and the widest range of dual tone options. If you like to travel with your tribe in style, this 7-seater is the perfect choice for you.",
-        sec_title: "FAMILY TIME GETS EVEN BETTER",
+        title: "STYLE THAT SPEAKS FOR ITSELF",
+        subtitle: "ENTER THE WORLD OF KWID",
+        desc: "The frame gets classier with a dual tone finish while the interior details get bolder with hints of Sporty White and Metal Mustard. Every curve of the Kwid is refined to accentuate its powerful silhouette and offer a remarkable driving experience.",
+        sec_title: "A STUNNER FROM EVERY ANGLE",
         sec_desc:
-          "Talk about style and practicality when it comes to Renault Triber. Every detail of this sub 4-metre MPV is well thought of and smartly designed to become the go-to choice for families.",
-        third_title: "SPOILT FOR CHOICE",
+          "Get used to being the centre of attention as you steer around the bold and stunning Renault Kwid. Its SUV-inspired design and distinctive signature lighting elevates the overall ambience.",
+        third_title: "Spoilt for Choice",
         third_desc:
-          "TRIBER comes in a wide range of colour options, from solid monotones to gorgeous dual tones, so that you can pick the one that complements your personality.",
+          "Kwid comes in a wide range of colour options, from solid monotones to gorgeous dual tones, so that you can pick the one that complements your personality.",
         variants_img: require("../assets/images/triber/19.webp"),
+        grid_images: [
+          require("../assets/images/kwid/design/2.webp"),
+          require("../assets/images/kwid/design/3.webp"),
+          require("../assets/images/kwid/design/4.webp"),
+          require("../assets/images/kwid/design/5.webp"),
+        ],
+
         sliders: [
-          {
-            desktop: require("../assets/images/triber/21.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/20.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/23.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/24.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/25.webp"),
-          },
+          require("../assets/images/kwid/design/6.webp"),
+          require("../assets/images/kwid/design/7.webp"),
         ],
       },
     ],
@@ -279,6 +274,7 @@ export const carSpecs = [
   {
     id: "renault-triber-on-road-price-hyderabad",
     name: "Renault Triber",
+    pdf: require("../assets/brochures/triber.pdf"),
     caption: "space for everything",
     ptitle: "DESIGNED TO TRAVEL TOGETHER",
     pdesc:
@@ -416,30 +412,40 @@ export const carSpecs = [
         img: require("../assets/images/triber/18.webp"),
       },
     ],
-    featured_main_title: "THE FEATURE-LOADED FAVOURITE",
-    featured_title: "JOY OF EFFORTLESS DRIVES",
+    featured_main_title: "Driving experience, enhanced",
+    featured_title: "the smarter choice",
     featured_desc:
-      "What’s on the inside matters, so we made it a lot more exciting. The seamlessly integrated smart features are ready to take your on-road experience to a whole new level.",
+      "Triber’s sophisticated interiors get a touch of smart to make your drives as entertaining as possible. Cruise through whatever life demands with the robust features.",
     feature: [
       {
         id: 1,
-        title: "184 mm ground clearance",
-        img: require("../assets/images/kiger/14.webp"),
+        title: "20.33cm touchscreen mediaNav evolution",
+        img: require("../assets/images/triber/27.webp"),
       },
       {
         id: 2,
         title: "electronic stability program",
-        img: require("../assets/images/kiger/15.webp"),
+        img: require("../assets/images/triber/28.webp"),
       },
       {
         id: 3,
-        title: "tyre pressure monitoring system",
-        img: require("../assets/images/kiger/16.webp"),
+        title: "led instrument cluster",
+        img: require("../assets/images/triber/29.webp"),
       },
       {
         id: 4,
-        title: "traction control system",
-        img: require("../assets/images/kiger/17.webp"),
+        title: "smart access card",
+        img: require("../assets/images/triber/30.webp"),
+      },
+      {
+        id: 5,
+        title: "push start-stop button",
+        img: require("../assets/images/triber/31.webp"),
+      },
+      {
+        id: 6,
+        title: "projector headlamps with led drls",
+        img: require("../assets/images/triber/32.webp"),
       },
     ],
     featured_slider: [
@@ -487,22 +493,19 @@ export const carSpecs = [
         third_desc:
           "TRIBER comes in a wide range of colour options, from solid monotones to gorgeous dual tones, so that you can pick the one that complements your personality.",
         variants_img: require("../assets/images/triber/19.webp"),
+        grid_images: [
+          require("../assets/images/triber/design/1.webp"),
+          require("../assets/images/triber/design/2.webp"),
+          require("../assets/images/triber/design/3.webp"),
+          require("../assets/images/triber/design/4.webp"),
+          require("../assets/images/triber/design/5.webp"),
+        ],
         sliders: [
-          {
-            desktop: require("../assets/images/triber/21.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/20.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/23.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/24.webp"),
-          },
-          {
-            desktop: require("../assets/images/triber/25.webp"),
-          },
+          require("../assets/images/triber/21.webp"),
+          require("../assets/images/triber/20.webp"),
+          require("../assets/images/triber/23.webp"),
+          require("../assets/images/triber/24.webp"),
+          require("../assets/images/triber/25.webp"),
         ],
       },
     ],
@@ -560,6 +563,7 @@ export const carSpecs = [
   {
     id: "renault-kiger-on-road-price-hyderabad",
     name: "Renault Kiger",
+    pdf: require("../assets/brochures/kiger.pdf"),
     caption: "sporty smart stunning",
     ptitle: "EXCITEMENT BEYOND ORDINARY",
     pdesc:
@@ -714,36 +718,41 @@ export const carSpecs = [
         img: require("../assets/images/kiger/17.webp"),
       },
     ],
-    featured_main_title: "THE FEATURE-LOADED FAVOURITE",
-    featured_title: "JOY OF EFFORTLESS DRIVES",
+    featured_main_title: "Smart features",
+    featured_title: "Driven by innovation",
     featured_desc:
-      "What’s on the inside matters, so we made it a lot more exciting. The seamlessly integrated smart features are ready to take your on-road experience to a whole new level.",
+      "Renault Kiger is as smart as it is stunning. The interiors are amplified with new features & advanced technology to power a futuristic driving experience.",
+    featured_third_title: "Get on the safer side",
+    featured_third_desc:
+      "Approved by the GNCAP, Kiger houses thoughtfully designed safety features to offer complete peace of mind.",
+
     feature: [
       {
         id: 1,
-        title: "184 mm ground clearance",
-        img: require("../assets/images/kiger/14.webp"),
+        title: "4 Airbags",
+        img: require("../assets/images/kiger/featured/1.webp"),
       },
       {
         id: 2,
-        title: "electronic stability program",
-        img: require("../assets/images/kiger/15.webp"),
+        title: "Abs & EBD",
+        img: require("../assets/images/kiger/featured/2.webp"),
       },
       {
         id: 3,
-        title: "tyre pressure monitoring system",
-        img: require("../assets/images/kiger/16.webp"),
+        title: "Rear view camera",
+        img: require("../assets/images/kiger/featured/3.webp"),
       },
       {
         id: 4,
-        title: "traction control system",
-        img: require("../assets/images/kiger/17.webp"),
+        title: "Front Parking sensor",
+        img: require("../assets/images/kiger/featured/4.webp"),
       },
     ],
     featured_slider: [
-      require("../assets/images/kwid/slider/1.webp"),
-      require("../assets/images/kwid/slider/2.webp"),
-      require("../assets/images/kwid/slider/3.webp"),
+      require("../assets/images/kiger/featured/5.webp"),
+      require("../assets/images/kiger/featured/6.webp"),
+      require("../assets/images/kiger/featured/7.webp"),
+      require("../assets/images/kiger/featured/8.webp"),
     ],
     acce: [
       {
@@ -772,16 +781,17 @@ export const carSpecs = [
         third_desc:
           "Kiger comes in a wide range of colour options, from solid monotones to gorgeous dual tones, so that you can pick the one that complements your personality.",
         // variants_img: require("../assets/images/triber/19.webp"),
+        grid_images: [
+          require("../assets/images/kiger/3.webp"),
+          require("../assets/images/kiger/4.webp"),
+          require("../assets/images/kiger/5.webp"),
+          require("../assets/images/kiger/6.webp"),
+          require("../assets/images/kiger/7.webp"),
+        ],
         sliders: [
-          {
-            desktop: require("../assets/images/kiger/19.webp"),
-          },
-          {
-            desktop: require("../assets/images/kiger/20.webp"),
-          },
-          {
-            desktop: require("../assets/images/kiger/21.webp"),
-          },
+          require("../assets/images/kiger/19.webp"),
+          require("../assets/images/kiger/20.webp"),
+          require("../assets/images/kiger/21.webp"),
         ],
       },
     ],

@@ -6,7 +6,6 @@ import DealerSvg from "../../assets/images/svg/dealer.svg";
 import { Link } from "react-router-dom";
 import { BsFacebook, BsTwitter, BsYoutube, BsLinkedin } from "react-icons/bs";
 import { FiInstagram } from "react-icons/fi";
-import { IoLogoWhatsapp } from "react-icons/io";
 import {
   EnvelopeIcon,
   MapPinIcon,
@@ -68,7 +67,7 @@ function Footer() {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <MapPinIcon className="h-5 w-5 " />
-                  <p className="font-medium">Hyderabad</p>
+                  <p className="font-medium">Hyderabad / Khammam</p>
                 </div>
                 <div className="flex items-center space-x-7 text-xs">
                   <div className="flex items-center space-x-2 underline">
