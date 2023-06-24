@@ -8,9 +8,9 @@ function Offers() {
   const { pathname } = useLocation();
   const [car, setCar] = useState();
   const uid = pathname.split("/")[2];
-  const aid = uid.split("-")[0];
-  const bid = uid.split("-")[1];
-  const id = `${aid}-${bid}`;
+  // const aid = uid.split("-")[0];
+  // const bid = uid.split("-")[1];
+  // const id = `${aid}-${bid}`;
   const d = new Date().getMonth();
   const monthNames = [
     "January",
@@ -30,8 +30,9 @@ function Offers() {
     document.title = `${car?.name} On Road Price in Hyderabad | ${
       car?.name.split(" ")[1]
     } Offers Hyderabad`;
-    carSpecs?.forEach((item) => item.id === id && setCar(item));
-  }, [id, car]);
+    carSpecs?.forEach((item) => item.id === uid && setCar(item));
+  }, [uid, car]);
+
 
   return (
     <>
@@ -62,7 +63,7 @@ function Offers() {
 
               <div className="my-3 text-sm ">
                 {item.year_benefits.map((i) => (
-                  <div className="mt-5">
+                  <div className="mt-5" key={i}>
                     <p className="font-semibold">VIN {i.year}:</p>
                     <ul className=" list-disc px-5 ">
                       <li>{i.benefits[0]}</li>

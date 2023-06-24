@@ -20,7 +20,7 @@ function Footer() {
         <div className="max-w-container mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
             <Link
-              to={"/renault-car-test-drive"}
+              to={"/renault-car-booking-online"}
               className="flex items-center justify-center flex-col"
             >
               <img src={InterestSvg} className="h-10 w-10" alt="" />
@@ -38,17 +38,20 @@ function Footer() {
             </Link>
 
             <Link
-              to={"/renault-car-test-drive"}
+              to={"/finance"}
               className="flex items-center justify-center flex-col"
             >
               <img src={DealerSvg} className="h-10 w-10" alt="" />
               <p className="font-semibold text-sm mt-2">finance</p>
             </Link>
 
-            <div className="flex items-center justify-center flex-col">
+            <Link
+              to={"/renault-cars-hyderabad"}
+              className="flex items-center justify-center flex-col"
+            >
               <img src={BrochureSvg} className="h-10 w-10" alt="" />
               <p className="font-semibold text-sm mt-2">downlaod brochure</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -70,7 +73,7 @@ function Footer() {
                 <div className="flex items-center space-x-7 text-xs">
                   <div className="flex items-center space-x-2 underline">
                     <PhoneArrowUpRightIcon className="h-4 w-4" />
-                    <a href="tel:8297431431">8297431431</a>
+                    <a href="tel:7832888999">7832888999</a>
                   </div>
                 </div>
                 <div className="sm:flex hidden  items-center space-x-2">
@@ -80,7 +83,7 @@ function Footer() {
                   </a>
                 </div>
               </div>
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <MapPinIcon className="h-5 w-5 " />
                   <p className="font-medium">Khammam</p>
@@ -95,7 +98,7 @@ function Footer() {
                   <EnvelopeIcon className="h-5 w-5 " />
                   <a href="mailto:renaultkmm@gmail.com">renaultkmm@gmail.com</a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-span-1">
@@ -109,48 +112,48 @@ function Footer() {
           <div className="col-span-1">
             <p className="text-sm font-semibold mb-5">Customer Service</p>
             <div className="flex text-sm space-y-2 flex-col">
-              <Link to={"/"}>Contact Us</Link>
-              <Link to={"/"}>Book a test drive</Link>
-              <Link to={"/"}>Finance</Link>
-              <Link to={"/"}>Register a complaint</Link>
+              <Link to={"/contact"}>Contact Us</Link>
+              <Link to={"/renault-car-test-drive"}>Book a test drive</Link>
+              <Link to={"/finance"}>Finance</Link>
+              <Link to={"/register-a-complaint"}>Register a complaint</Link>
             </div>
           </div>
           <div className="col-span-1">
             <p className="text-sm font-semibold mb-5">Social</p>
             <div className="flex items-center justify-start space-x-5">
-              <Link to={"/"}>
+              <Link to={"/https://www.facebook.com/ArkaRenaultTs/"}>
                 <BsFacebook className="text-blue-500 h-6 w-6" />
               </Link>
-              <Link to={"/"}>
+              <Link to={"/https://twitter.com/arka_renault"}>
                 <BsTwitter className="text-cyan-500 h-6 w-6" />
               </Link>
-              <Link to={"/"}>
+              <Link to={"/https://www.instagram.com/arkarenault/"}>
                 <FiInstagram className="text-rose-500 h-6 w-6" />
               </Link>
-              <Link to={"/"}>
+              <Link to={"/https://youtube.com/@arkarenault3883"}>
                 <BsYoutube className="text-red-600 h-6 w-6" />
               </Link>
-              <Link to={"/"}>
+              <Link to={"/https://www.linkedin.com/company/arkarenault"}>
                 <BsLinkedin className="text-sky-600 h-5 w-5" />
-              </Link>
-              <Link to={"/"}>
-                <IoLogoWhatsapp className="text-green-600 h-6 w-6" />
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-100  text-sm">
+      <div className="bg-gray-100 text-sm">
         <div className="container mx-auto">
-          <div className="flex items-center justify-between p-3">
+          <div className="flex md:flex-row flex-col items-center justify-between p-3">
             <div className="flex items-center space-x-3">
-              <Link to={"/"}>privacy policy</Link>
+              <Link to={"/privacy-and-legal"}>privacy & legal</Link>
               <div className="h-5 w-px bg-gray-400"></div>
               <Link to={"/"}>terms & conditions</Link>
             </div>
 
-            <p>All rights reserved by Arka Renault</p>
+            <p>
+              All rights reserved by{" "}
+              <span className="font-semibold">Arka Renault</span>
+            </p>
           </div>
         </div>
       </div>

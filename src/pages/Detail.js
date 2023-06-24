@@ -11,26 +11,27 @@ const Featured = lazy(() => import("../components/detail/Featured"));
 const Safety = lazy(() => import("../components/detail/Safety"));
 const Engine = lazy(() => import("../components/detail/Engine"));
 const Specification = lazy(() => import("../components/detail/Specification"));
+const Price = lazy(() => import("../components/detail/Price"));
 
 function Detail() {
   const { pathname } = useLocation();
 
-  const [car, setCar] = useState();
+  const [car, setCar] = useState(null);
   const id = pathname.split("/")[2];
   useEffect(() => {
     document.title = `${car?.name} On Road Price in Hyderabad | ${
       car?.name.split(" ")[1]
     } Offers Hyderabad`;
     carSpecs?.forEach((item) => item.id === id && setCar(item));
-  }, [id, car]);
+  }, [id, car?.name]);
 
   const tabs = [
     car?.name.split(" ")[1],
     "safety",
-    "features",
-    "desgin",
+    // "features",
+    "design",
     "engine",
-    // "price",
+    "price",
     // "specifications",
   ];
   const [activeTab, setActiveTab] = useState(0);
@@ -38,13 +39,13 @@ function Detail() {
     <Suspense fallback={<Loading />}>
       <Header />
       <Helmet>
-        {car?.name === "Renault Kiger" && (
+        {car?.name === "Renault Kwid" && (
           <meta
             name="description"
             content="Renault Kwid on road price in Hyderabad. Arka Renault offers best deals on Kwid. Visit us today to know more offers on Kwid. Renault Kwid most selling Hatchback. Reanult Kwid test drive today."
           />
         )}
-        {car?.name === "Renault Kwid" && (
+        {car?.name === "Renault Kiger" && (
           <meta
             name="description"
             content="Renault Kiger on road price in Hyderabad. Arka Renault offers best deals on Kiger. Visit us today to know more offers on Kiger. Renault Kiger most selling SUV. Reanult Kiger test drive today."
@@ -81,7 +82,7 @@ function Detail() {
             download brochure
           </Link>
           <Link
-            to={"/"}
+            to={"/renault-car-test-drive"}
             className="px-4 py-2.5 border border-gray-700 font-semibold"
           >
             book a test drive
@@ -99,6 +100,7 @@ function Detail() {
       {activeTab === 2 && <Featured car={car} />}
       {activeTab === 3 && <Design car={car} />}
       {activeTab === 4 && <Engine car={car} />}
+      {activeTab === 5 && <Price car={car} />}
       {activeTab === 6 && <Specification car={car} />}
 
       <Footer />

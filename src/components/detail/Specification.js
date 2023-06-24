@@ -24,9 +24,6 @@ function Specification({ car }) {
           <img src={require("../../assets/images/kwid/spec_1.webp")} alt="" />
           <img src={require("../../assets/images/kwid/spec_3.webp")} alt="" />
         </div>
-        <button className="bg-black text-white font-semibold px-5 py-2.5 flex mx-auto my-5">
-          compare
-        </button>
       </div>
     </div>
   );

@@ -12,6 +12,8 @@ function Sidebar({ active }) {
   useEffect(() => {
     setActiveScreen(location);
   }, [location]);
+
+
   return (
     <div
       className={`${

@@ -46,19 +46,19 @@ export const cars = [
     id: 1,
     name: "kwid",
     img: require("../assets/images/mobile_images/kwid.png"),
-    link: "renault-kwid",
+    link: "renault-kwid-on-road-price-hyderabad",
   },
   {
     id: 2,
     name: "triber",
     img: require("../assets/images/mobile_images/triber.png"),
-    link: "renault-triber",
+    link: "renault-triber-on-road-price-hyderabad",
   },
   {
     id: 3,
     name: "kiger",
     img: require("../assets/images/mobile_images/kiger.png"),
-    link: "renault-kiger",
+    link: "renault-kiger-on-road-price-hyderabad",
   },
 ];
 

@@ -42,7 +42,7 @@ function Zone() {
       </div>
 
       <div className="flex items-center justify-center space-x-5 mb-10">
-        <Link className="bg-black font-semibold text-white px-5 py-2 hover:bg-secondary transition hover:text-black">
+        <Link to={'/renault-car-test-drive'} className="bg-black font-semibold text-white px-5 py-2 hover:bg-secondary transition hover:text-black">
           book a test drive
         </Link>
       </div>

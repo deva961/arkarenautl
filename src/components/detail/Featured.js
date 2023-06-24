@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "../slider/Slider";
-import { feature_kwid_slider } from "../../constants";
 import VehicleCard from "../card/VehicleCard";
 function Featured({ car }) {
   return (
@@ -33,7 +32,7 @@ function Featured({ car }) {
         <p className="text-sm md:text-base mt-2">{car?.featured_desc}</p>
       </div>
 
-      <Slider sliders={feature_kwid_slider} />
+      <Slider sliders={car?.featured_slider} />
 
       <div className="max-w-7xl mx-auto mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

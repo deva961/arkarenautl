@@ -5,7 +5,6 @@ import { Bars3CenterLeftIcon } from "@heroicons/react/24/outline";
 import { HiChevronRight } from "react-icons/hi";
 import MobileHeader from "./MobileHeader";
 import { Link } from "react-router-dom";
-import Car from "../car/Car";
 import { carSpecs } from "../../constants/specs";
 const navigation = {
   categories: [
@@ -14,8 +13,8 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "About Us", href: "#" },
-    { name: "Finance", href: "#" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Finance", href: "/finance" },
     { name: "Offers", href: "/car-offers" },
   ],
 };
@@ -41,7 +40,7 @@ function Header() {
       />
 
       <header className="relative bg-black">
-        <nav aria-label="Top" className="mx-10 px-4 py-5 sm:px-6 lg:px-8">
+        <nav aria-label="Top" className="mx-5 md:mx-10 px-4 py-5 sm:px-6 lg:px-8">
           <>
             <div className="flex h-16 items-center">
               {/* Logo */}
@@ -98,17 +97,17 @@ function Header() {
                                     <div className="flex flex-col">
                                       <div className="flex items-center">
                                         <HiChevronRight className="w-5 h-5" />
-                                        <Link to={"/"} className="font-semibold">Book a test drive</Link>
+                                        <Link to={"/renault-car-test-drive"} className="font-semibold">Book a test drive</Link>
                                       </div>
                                     </div>
                                     <div className="flex items-center">
                                       <HiChevronRight className="w-5 h-5" />
-                                      <Link to={"/"} className="font-semibold">Register a complaint</Link>
+                                      <Link to={"/register-a-complaint"} className="font-semibold">Register a complaint</Link>
                                     </div>
-                                    <div className="flex items-center">
+                                    {/* <div className="flex items-center">
                                       <HiChevronRight className="w-5 h-5" />
-                                      <Link to={"/"} className="font-semibold">Faq</Link>
-                                    </div>
+                                      <Link to={"/faq"} className="font-semibold">Faq</Link>
+                                    </div> */}
                                   </div>
                                   <div className="flex-grow flex space-x-5 ml-12">
                                     <div className="h-48 bg-gray-100 w-px"></div>
@@ -155,7 +154,7 @@ function Header() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:ml-8 lg:flex">
                   <Link
-                    to={"/"}
+                    to={"/contact"}
                     className="flex items-center flex-col text-gray-100"
                   >
                     <img src={InterestSvg} alt="" />

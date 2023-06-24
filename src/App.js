@@ -5,13 +5,22 @@ import Detail from "./pages/Detail";
 import Popup from "./components/popup/Popup";
 import Loading from "./components/loading/Loading";
 import { AuthContext } from "./context/AuthContext";
-import TestDrive from "./pages/forms/TestDrive";
 import Thankyou from "./pages/Thankyou";
+
 const Home = lazy(() => import("./pages/Home"));
 const Leads = lazy(() => import("./pages/admin/leads/Leads"));
 const Login = lazy(() => import("./pages/admin/auth/Login"));
 const Zone = lazy(() => import("./pages/offer/Zone"));
 const Offers = lazy(() => import("./pages/offer/Offers"));
+const Finance = lazy(() => import("./pages/forms/Finance"));
+const TestDrive = lazy(() => import("./pages/forms/TestDrive"));
+const Interest = lazy(() => import("./pages/forms/Interest"));
+const Contact = lazy(() => import("./pages/forms/Contact"));
+const Complaint = lazy(() => import("./pages/forms/Complaint"));
+const Legal = lazy(() => import("./pages/Legal"));
+const About = lazy(() => import("./pages/About"));
+const Brochure = lazy(() => import("./pages/Brochure"));
+const Faq = lazy(() => import("./pages/Faq"));
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -40,7 +49,15 @@ function App() {
             <Route path="/listings/:id" element={<Detail />} />
             <Route path="/car-offers" element={<Zone />} />
             <Route path="/offers/:id" element={<Offers />} />
+            <Route path="/renault-cars-hyderabad" element={<Brochure />} />
             <Route path="/renault-car-test-drive" element={<TestDrive />} />
+            <Route path="/renault-car-booking-online" element={<Interest />} />
+            <Route path="/finance" element={<Finance />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/register-a-complaint" element={<Complaint />} />
+            <Route path="/privacy-and-legal" element={<Legal />} />
+            <Route path="/about-us" element={<About />} />
+            <Route path="/faq" element={<Faq />} />
             <Route path="/thank-you" element={<Thankyou />} />
             <Route
               path="*"

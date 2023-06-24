@@ -12,13 +12,7 @@ function MainSection({ car }) {
           <p className="text-gray-600 font-normal mt-3">{car?.caption}</p>
         </div>
         <div className="sec_2 mt-10 sm:mt-0">
-          <Link
-            to={"/"}
-            className="bg-black text-white px-5 py-2 flex items-center justify-center sm:justify-start space-x-3"
-          >
-            <img src={EmiSvg} alt="" />
-            <p>calculate emi</p>
-          </Link>
+          <p className="font-semibold text-md">starting from ₹4,69,500.00</p>
         </div>
       </div>
 
@@ -99,6 +93,43 @@ function MainSection({ car }) {
         ))}
       </div>
       {/* About section ends */}
+      {/* <div className="mx-auto container">
+        <div className="grid grid-cols-4">
+          <div className="col-span-3 bg-black p-8">
+            <p className="text-white text-2xl">
+              Want to own a <span className="font-semibold">{car?.name}?</span>
+            </p>
+            <form onSubmit={() => {}}>
+              <div className="grid grid-cols-2 gap-5">
+                <div className="flex flex-col relative">
+                  <input
+                    type="text"
+                    id="fname"
+                    // value={firstName}
+                    // onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="Name"
+                    className="max-w-96 w-full py-2 border-b transition ease-linear duration-300 focus:outline-none focus:border-secondary"
+                  />
+                </div>
+
+                <div className="flex flex-col relative">
+                  <input
+                    type="text"
+                    id="fname"
+                    // value={firstName}
+                    // onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="Mobiel"
+                    className="max-w-96 w-full p-2 border-b transition ease-linear duration-300 focus:outline-none focus:border-secondary"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div className="col-span-1">
+            <img src={car?.form_pic} className="object-cover" alt={car?.name} />
+          </div>
+        </div>
+      </div> */}
 
       {/* accessories section starts */}
       <div className="about__section mt-3 xl:mt-8">

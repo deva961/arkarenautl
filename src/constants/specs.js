@@ -1,9 +1,10 @@
 export const carSpecs = [
   {
-    id: "renault-kwid",
+    id: "renault-kwid-on-road-price-hyderabad",
     name: "Renault Kwid",
     caption: "live for more",
     pic: require("../assets/images/mobile_images/kwid.png"),
+    form_pic: require("../assets/images/kwid/24.webp"),
     ptitle: "LET THE WORLD TAKE NOTICE",
     pdesc:
       "Be it the SUV-inspired details or a dual tone look, Kwid never fails to impress. The interiors redefine superlative comfort and futuristic technology without missing out on a line-up of advanced safety features. No wonder, it’s the favourite hatchback of the generation.",
@@ -16,6 +17,45 @@ export const carSpecs = [
       require("../assets/images/kwid/6.webp"),
       require("../assets/images/kwid/7.webp"),
     ],
+    prices: [
+      {
+        title: "RXE MT 1L",
+        price: "469500",
+      },
+      {
+        title: "RXL MT 1L",
+        price: "499500",
+      },
+      {
+        title: "RXL(O) MT 1L",
+        price: "521500",
+      },
+      {
+        title: "RXT MT 1L",
+        price: "567500",
+      },
+      {
+        title: "CLIMBER MT 1L",
+        price: "587500",
+      },
+      {
+        title: "CLIMBER MT 1L DT",
+        price: "599500",
+      },
+      {
+        title: "RXT AMT 1L",
+        price: "612500",
+      },
+      {
+        title: "CLIMBER AMT 1L",
+        price: "632500",
+      },
+      {
+        title: "CLIMBER AMT 1L DT",
+        price: "644500",
+      },
+    ],
+
     offers: [
       {
         img: require("../assets/images/kwid/22.webp"),
@@ -122,6 +162,11 @@ export const carSpecs = [
         title: "traction control system",
         img: require("../assets/images/kwid/21.webp"),
       },
+    ],
+    featured_slider: [
+      require("../assets/images/kwid/slider/1.webp"),
+      require("../assets/images/kwid/slider/2.webp"),
+      require("../assets/images/kwid/slider/3.webp"),
     ],
     acce: [
       {
@@ -232,13 +277,14 @@ export const carSpecs = [
 
   //triber
   {
-    id: "renault-triber",
+    id: "renault-triber-on-road-price-hyderabad",
     name: "Renault Triber",
     caption: "space for everything",
     ptitle: "DESIGNED TO TRAVEL TOGETHER",
     pdesc:
       "Triber has got everything you could wish for in a family car. The ergonomic interiors are a blend of space, modularity and superior comfort whereas its new-age safety additions instil great peace of mind. Finally, a line-up of classy dual tones seal the deal in style.",
     pic: require("../assets/images/mobile_images/triber.png"),
+    form_pic: require("../assets/images/kwid/24.webp"),
     banner: require("../assets/images/triber/1.webp"),
     gallery: [
       require("../assets/images/triber/2.webp"),
@@ -247,6 +293,40 @@ export const carSpecs = [
       require("../assets/images/triber/5.webp"),
       require("../assets/images/triber/6.webp"),
       require("../assets/images/triber/7.webp"),
+    ],
+    prices: [
+      {
+        title: "RXE MT",
+        price: "599800",
+      },
+      {
+        title: "RXL MT",
+        price: "676300",
+      },
+      {
+        title: "RXT MT",
+        price: "731300",
+      },
+      {
+        title: "RXZ MT",
+        price: "791300",
+      },
+      {
+        title: "RXZ MT Dual Tone",
+        price: "863300",
+      },
+      {
+        title: "RXT AMT",
+        price: "783300",
+      },
+      {
+        title: "RXZ AMT",
+        price: "843300",
+      },
+      {
+        title: "RXZ AMT Dual Tone",
+        price: "811300",
+      },
     ],
     offers: [
       {
@@ -362,6 +442,11 @@ export const carSpecs = [
         img: require("../assets/images/kiger/17.webp"),
       },
     ],
+    featured_slider: [
+      require("../assets/images/kwid/slider/1.webp"),
+      require("../assets/images/kwid/slider/2.webp"),
+      require("../assets/images/kwid/slider/3.webp"),
+    ],
     discover: [
       {
         id: 1,
@@ -473,13 +558,14 @@ export const carSpecs = [
 
   //kiger
   {
-    id: "renault-kiger",
+    id: "renault-kiger-on-road-price-hyderabad",
     name: "Renault Kiger",
     caption: "sporty smart stunning",
     ptitle: "EXCITEMENT BEYOND ORDINARY",
     pdesc:
       "Go where your curiosity takes you with Renault Kiger. Its stunning yet muscular SUV stance is crafted to complement your free spirit. While the sporty performance, smart interiors and enhanced safety features deliver a perfect balance of power and comfort. So, take the wheel and chase new experiences.",
     pic: require("../assets/images/mobile_images/kiger.png"),
+    form_pic: require("../assets/images/kwid/24.webp"),
     banner: require("../assets/images/kiger/1.webp"),
     gallery: [
       require("../assets/images/kiger/2.webp"),
@@ -488,6 +574,57 @@ export const carSpecs = [
       require("../assets/images/kiger/5.webp"),
       require("../assets/images/kiger/6.webp"),
       require("../assets/images/kiger/7.webp"),
+    ],
+    prices: [
+      //manual single tone
+      {
+        title: "RXE MT Single Tone",
+        price: "649990",
+      },
+      {
+        title: "RXT MT Single Tone",
+        price: "791990",
+      },
+      {
+        title: "RXT(O) MT Single Tone",
+        price: "799990",
+      },
+      {
+        title: "RXZ MT Single Tone",
+        price: "879990",
+      },
+      //automatic single tone
+      {
+        title: "RXT AMT Single Tone",
+        price: "846990",
+      },
+      {
+        title: "RXT(O) AMT Single Tone",
+        price: "854990",
+      },
+      {
+        title: "RXZ AMT Single Tone",
+        price: "934990",
+      },
+
+      //manual dual tone
+      {
+        title: "RXT(O) MT Dual Tone",
+        price: "822990",
+      },
+      {
+        title: "RXZ MT Dual Tone",
+        price: "902990",
+      },
+      //automatic
+      {
+        title: "RXT(O) AMT Dual Tone",
+        price: "877990",
+      },
+      {
+        title: "RXZ AMT Dual Tone",
+        price: "957990",
+      },
     ],
     offers: [
       {
@@ -602,6 +739,11 @@ export const carSpecs = [
         title: "traction control system",
         img: require("../assets/images/kiger/17.webp"),
       },
+    ],
+    featured_slider: [
+      require("../assets/images/kwid/slider/1.webp"),
+      require("../assets/images/kwid/slider/2.webp"),
+      require("../assets/images/kwid/slider/3.webp"),
     ],
     acce: [
       {

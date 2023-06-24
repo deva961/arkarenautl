@@ -22,7 +22,7 @@ function Slider({ sliders }) {
         {sliders.map((item, i) => (
           <SwiperSlide key={i}>
             <img
-              src={item.desktop}
+              src={item}
               loading="lazy"
               className="max-w-full max-h-[700px] w-full object-cover"
               alt={i}

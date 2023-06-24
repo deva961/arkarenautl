@@ -2,14 +2,14 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Form from "../../components/form/Form";
 
-function TestDrive() {
+function Finance() {
   return (
     <>
       <Header />
-      <Form title={"Book a test drive"} />
+      <Form title={"Finance"} />
       <Footer />
     </>
   );
 }
 
-export default TestDrive;
+export default Finance;
