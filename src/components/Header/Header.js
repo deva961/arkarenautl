@@ -155,7 +155,7 @@ function Header() {
                 <div className="hidden lg:ml-8 lg:flex">
                   <Link
                     to={"/contact"}
-                    className="flex items-center flex-col text-gray-100"
+                    className="flex items-center flex-col text-gray-50 hover:text-gray-200 font-medium"
                   >
                     <img src={InterestSvg} alt="" />
                     <p className="text-xs">contact us</p>

@@ -115,6 +115,7 @@ function Footer() {
               <Link to={"/renault-car-test-drive"}>Book a test drive</Link>
               <Link to={"/finance"}>Finance</Link>
               <Link to={"/register-a-complaint"}>Register a complaint</Link>
+              <Link to={"/renault-car-service-near-me"}>Book a service</Link>
             </div>
           </div>
           <div className="col-span-1">
@@ -146,7 +147,7 @@ function Footer() {
             <div className="flex items-center space-x-3">
               <Link to={"/privacy-and-legal"}>privacy & legal</Link>
               <div className="h-5 w-px bg-gray-400"></div>
-              <Link to={"/"}>terms & conditions</Link>
+              <Link to={"/privacy-and-legal"}>terms & conditions</Link>
             </div>
 
             <p>

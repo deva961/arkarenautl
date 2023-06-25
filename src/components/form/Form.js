@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../assets/css/form.css'
+import "../../assets/css/form.css";
 import {
   ArrowRightIcon,
   EnvelopeIcon,
@@ -12,46 +12,52 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { CgSpinner } from "react-icons/cg";
 
-function Form({title}) {
-    const [loading, setLoading] = useState(false);
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [model, setModel] = useState();
-    let navigate = useNavigate();
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      const dataCollectionRef = collection(db, "leads");
-      setLoading(true);
-      if (firstName && phone && model) {
-        try {
-          await addDoc(dataCollectionRef, {
-            firstName,
-            lastName,
-            email,
-            phone,
-            model,
-            timestamp: serverTimestamp()
-          });
-          navigate("/thank-you");
-        } catch (error) {
-          toast.error("something went wrong");
-        }
-      } else {
-        toast.error("Please fill all the fields");
+function Form({ veh }) {
+  const [loading, setLoading] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [model, setModel] = useState();
+  let navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const dataCollectionRef = collection(db, "leads");
+    setLoading(true);
+    if (firstName && phone && model) {
+      try {
+        await addDoc(dataCollectionRef, {
+          firstName,
+          lastName,
+          email,
+          phone,
+          model,
+          timestamp: serverTimestamp(),
+        });
+        navigate("/thank-you");
+      } catch (error) {
+        toast.error("something went wrong");
       }
-      setLoading(false);
-    };
+    } else {
+      toast.error("Please fill all the fields");
+    }
+    setLoading(false);
+  };
   return (
     <>
-      
       <div className="flex lg:flex-row flex-col-reverse">
-        <div className="flex-grow lg:my-16 lg:ml-32 m-5">
+        <div className={`${veh ? "w-full" : "flex-grow lg:my-16 lg:ml-32 m-5"}`}>
           <p className="font-semibold text-lg mb-10 lg:mb-14">
             Enter your contact details
           </p>
-          <form onSubmit={handleSubmit} className="space-y-10">
+          <form
+            onSubmit={handleSubmit}
+            className={`${
+              veh
+                ? "flex flex-row justify-between items-center space-x-4"
+                : "space-y-10"
+            }`}
+          >
             <div className="flex flex-col relative">
               <input
                 type="text"
@@ -70,7 +76,7 @@ function Form({title}) {
               </label>
             </div>
 
-            <div className="flex flex-col relative">
+            <div className={`${veh ? "hidden" : "flex flex-col relative"}`}>
               <input
                 type="text"
                 id="lname"
@@ -159,7 +165,7 @@ function Form({title}) {
             </button>
           </form>
         </div>
-        <div className="flex-1 bg-gray-100 p-5">
+        <div className={`${veh ? "hidden" : "flex-1"} bg-gray-100 p-5`}>
           <div className="bg-white p-5 w-full mb-10">
             <p className="font-semibold text-xl">Arka Renault</p>
 

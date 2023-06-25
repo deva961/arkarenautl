@@ -6,22 +6,22 @@ const Header = lazy(() => import("../../components/Header/Header"));
 const Footer = lazy(() => import("../../components/Footer/Footer"));
 const Form = lazy(() => import("../../components/form/Form"));
 
-function Contact() {
-  document.title = "Contact Us | Renault Hyderabad | Renault Khammam";
+function Service() {
+  document.title = "Renault Service Center in Hyderabad | Renault Service Center Near Me";
   return (
     <Suspense fallback={<Loading />}>
       <Helmet>
         <meta
           name="description"
-          content="Enquiry of any new Renault cars, Latest on going offers on Renault Triber, Kwid & Kiger. Insurance Renewal. Test drive booking online. Get Renault quote online. Call now."
+          content="Renault service center in Hyderabad. Arka Renault is the authorized Renault service center in Hyderabad. Get best offers on scheduled service appointment. Book service appointment today.Free pickup and drop facility available."
         />
       </Helmet>
       <Header />
-      <Breadcrumb title={"Contact Us"} />
-      <Form title={"Contact Us"} />
+      <Breadcrumb title={"Book a Service"} />
+      <Form />
       <Footer />
     </Suspense>
   );
 }
 
-export default Contact;
+export default Service;

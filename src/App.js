@@ -7,6 +7,7 @@ import Loading from "./components/loading/Loading";
 import { AuthContext } from "./context/AuthContext";
 import Thankyou from "./pages/Thankyou";
 
+
 const Home = lazy(() => import("./pages/Home"));
 const Leads = lazy(() => import("./pages/admin/leads/Leads"));
 const Login = lazy(() => import("./pages/admin/auth/Login"));
@@ -16,6 +17,7 @@ const Finance = lazy(() => import("./pages/forms/Finance"));
 const TestDrive = lazy(() => import("./pages/forms/TestDrive"));
 const Interest = lazy(() => import("./pages/forms/Interest"));
 const Contact = lazy(() => import("./pages/forms/Contact"));
+const Service = lazy(() => import("./pages/forms/Service"));
 const Complaint = lazy(() => import("./pages/forms/Complaint"));
 const Legal = lazy(() => import("./pages/Legal"));
 const About = lazy(() => import("./pages/About"));
@@ -58,6 +60,7 @@ function App() {
             <Route path="/renault-cars-hyderabad" element={<Brochure />} />
             <Route path="/renault-car-test-drive" element={<TestDrive />} />
             <Route path="/renault-car-booking-online" element={<Interest />} />
+            <Route path="/renault-car-service-near-me" element={<Service />} />
             <Route path="/finance" element={<Finance />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/register-a-complaint" element={<Complaint />} />

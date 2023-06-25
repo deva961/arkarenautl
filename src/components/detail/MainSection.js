@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import VehicleCard from "../card/VehicleCard";
 import GridDesign from "../GridDesign";
+import Form from "../form/Form";
+
 function MainSection({ car }) {
   return (
     <div className="p-5 max-w-6xl mx-auto">
@@ -13,6 +15,14 @@ function MainSection({ car }) {
         </div>
         <div className="sec_2 mt-10 sm:mt-0">
           <p className="font-semibold text-md">starting from ₹4,69,500.00</p>
+          <a
+            href={car?.pdf}
+            target={"_blank"}
+            rel="noreferrer"
+            className="text-sm border-b-2 border-secondary"
+          >
+            download brochure
+          </a>
         </div>
       </div>
 
@@ -47,23 +57,7 @@ function MainSection({ car }) {
         ))}
       </div>
 
-      <div className="flex items-center justify-center flex-col lg:flex-row space-y-2 lg:space-x-2 lg:space-y-0 mt-5">
-        <a
-          href={car?.pdf}
-          target={"_blank"}
-          rel="noreferrer"
-          className="bg-black font-semibold text-white px-5 py-2 text-sm"
-        >
-          <p>downlaod brochure</p>
-        </a>
-
-        <Link
-          to={"/renault-car-test-drive"}
-          className="border-black text-sm border font-semibold text-black px-8 py-2"
-        >
-          <p>register interest</p>
-        </Link>
-      </div>
+      <Form veh />
 
       {/* discover section starts */}
       {car?.name === "Renault Triber" && (
@@ -97,43 +91,6 @@ function MainSection({ car }) {
         ))}
       </div>
       {/* About section ends */}
-      {/* <div className="mx-auto container">
-        <div className="grid grid-cols-4">
-          <div className="col-span-3 bg-black p-8">
-            <p className="text-white text-2xl">
-              Want to own a <span className="font-semibold">{car?.name}?</span>
-            </p>
-            <form onSubmit={() => {}}>
-              <div className="grid grid-cols-2 gap-5">
-                <div className="flex flex-col relative">
-                  <input
-                    type="text"
-                    id="fname"
-                    // value={firstName}
-                    // onChange={(e) => setFirstName(e.target.value)}
-                    placeholder="Name"
-                    className="max-w-96 w-full py-2 border-b transition ease-linear duration-300 focus:outline-none focus:border-secondary"
-                  />
-                </div>
-
-                <div className="flex flex-col relative">
-                  <input
-                    type="text"
-                    id="fname"
-                    // value={firstName}
-                    // onChange={(e) => setFirstName(e.target.value)}
-                    placeholder="Mobiel"
-                    className="max-w-96 w-full p-2 border-b transition ease-linear duration-300 focus:outline-none focus:border-secondary"
-                  />
-                </div>
-              </div>
-            </form>
-          </div>
-          <div className="col-span-1">
-            <img src={car?.form_pic} className="object-cover" alt={car?.name} />
-          </div>
-        </div>
-      </div> */}
 
       {/* accessories section starts */}
       <div className="about__section mt-3 xl:mt-8">

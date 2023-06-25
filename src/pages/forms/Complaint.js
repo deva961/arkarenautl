@@ -1,57 +1,52 @@
-import { Helmet } from 'react-helmet'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
-import Breadcrumb from '../../components/Breadcrumb'
-
 import React, { useState } from "react";
-import '../../assets/css/form.css'
-import {
-  ArrowRightIcon,
-} from "@heroicons/react/24/outline";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
+import "../../assets/css/form.css";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { toast } from "react-hot-toast";
 import { db } from "../../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { CgSpinner } from "react-icons/cg";
 
-
 function Complaint() {
-    const [loading, setLoading] = useState(false);
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [dep, setDep] = useState('');
-    const [desc, setDesc] = useState('');
-    let navigate = useNavigate();
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      const dataCollectionRef = collection(db, "complaints");
-      setLoading(true);
-      if (firstName && phone) {
-        try {
-          await addDoc(dataCollectionRef, {
-            firstName,
-            lastName,
-            email,
-            phone,
-            dep,
-            desc,
-            timestamp: serverTimestamp()
-          });
-          navigate("/thank-you");
-        } catch (error) {
-          toast.error("something went wrong");
-        }
-      } else {
-        toast.error("Please fill all the fields");
+  const [loading, setLoading] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [dep, setDep] = useState("");
+  const [desc, setDesc] = useState("");
+  let navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const dataCollectionRef = collection(db, "complaints");
+    setLoading(true);
+    if (firstName && phone) {
+      try {
+        await addDoc(dataCollectionRef, {
+          firstName,
+          lastName,
+          email,
+          phone,
+          dep,
+          desc,
+          timestamp: serverTimestamp(),
+        });
+        navigate("/thank-you");
+      } catch (error) {
+        toast.error("something went wrong");
       }
-      setLoading(false);
-    };
+    } else {
+      toast.error("Please fill all the fields");
+    }
+    setLoading(false);
+  };
   return (
     <>
       <Header />
-      <Breadcrumb title={'Register a complaint'}/>
+      <Breadcrumb title={"Register a complaint"} />
       <div className="container mx-auto">
         <div className="m-5">
           <p className="font-semibold text-lg mb-10 lg:mb-20">
@@ -185,10 +180,7 @@ function Complaint() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
-export default Complaint
-
-
-
+export default Complaint;
