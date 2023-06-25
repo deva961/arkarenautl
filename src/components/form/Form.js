@@ -177,7 +177,7 @@ function Form({ veh }) {
               <div className="flex items-center space-x-7 text-sm">
                 <div className="flex items-center space-x-2 underline">
                   <PhoneArrowUpRightIcon className="h-4 w-4" />
-                  <a href="tel:8297431431">8297431431</a>
+                  <a href="tel:8297431431">7832888999</a>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
@@ -203,7 +203,7 @@ function Form({ veh }) {
               </div>
               <div className="flex items-center space-x-2">
                 <EnvelopeIcon className="h-5 w-5 " />
-                <a href="mailto:renaultkmm@gmail.com">renaultkmm@gmail.com</a>
+                <a href="mailto:renaulthyderabadarka@gmail.com">renaulthyderabadarka@gmail.com</a>
               </div>
             </div>
           </div>
