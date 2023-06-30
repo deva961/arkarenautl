@@ -47,14 +47,14 @@ function Form({ veh }) {
     <>
       <div className="flex lg:flex-row flex-col-reverse">
         <div className={`${veh ? "w-full" : "flex-grow lg:my-16 lg:ml-32 m-5"}`}>
-          <p className="font-semibold text-lg mb-10 lg:mb-14">
+          <p className="font-semibold text-lg mt-14 lg:mt-0 mb-10 lg:mb-14">
             Enter your contact details
           </p>
           <form
             onSubmit={handleSubmit}
             className={`${
               veh
-                ? "flex flex-row justify-between items-center space-x-4"
+                ? "lg:flex flex-row justify-between items-center lg:space-x-4 space-y-4 lg:space-y-0 mb-5 lg:mb-0"
                 : "space-y-10"
             }`}
           >

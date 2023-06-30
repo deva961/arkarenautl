@@ -11,6 +11,7 @@ import {
   MapPinIcon,
   PhoneArrowUpRightIcon,
 } from "@heroicons/react/24/outline";
+import { footerLinks } from "../../constants/footer";
 
 function Footer() {
   return (
@@ -82,60 +83,57 @@ function Footer() {
                   </a>
                 </div>
               </div>
-              {/* <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <MapPinIcon className="h-5 w-5 " />
-                  <p className="font-medium">Khammam</p>
-                </div>
-                <div className="flex items-center space-x-7 text-xs">
-                  <div className="flex items-center space-x-2 underline">
-                    <PhoneArrowUpRightIcon className="h-4 w-4" />
-                    <a href="tel:7832888999">7832888999</a>
-                  </div>
-                </div>
-                <div className="hidden sm:flex items-center space-x-2">
-                  <EnvelopeIcon className="h-5 w-5 " />
-                  <a href="mailto:renaultkmm@gmail.com">renaultkmm@gmail.com</a>
-                </div>
-              </div> */}
             </div>
           </div>
-          <div className="col-span-1">
-            <p className="text-sm font-semibold mb-5">Vehicles</p>
-            <div className="flex text-sm space-y-2 flex-col">
-              <Link to={"/listings/renault-kwid"}>Renault Kwid</Link>
-              <Link to={"/listings/renault-triber"}>Renault Triber</Link>
-              <Link to={"/listings/renault-kiger"}>Renault Kiger</Link>
+          {footerLinks?.slice(0,2).map((item, index) => (
+            <div className="col-span-1" key={index}>
+              <p className="text-sm font-semibold mb-5">{item.title}</p>
+              <div className="flex text-sm space-y-2 flex-col">
+                {item?.links?.map((link, index) => (
+                  <Link to={link?.url} key={index}>{link?.title}</Link>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="col-span-1">
-            <p className="text-sm font-semibold mb-5">Customer Service</p>
-            <div className="flex text-sm space-y-2 flex-col">
-              <Link to={"/contact"}>Contact Us</Link>
-              <Link to={"/renault-car-test-drive"}>Book a test drive</Link>
-              <Link to={"/finance"}>Finance</Link>
-              <Link to={"/register-a-complaint"}>Register a complaint</Link>
-              <Link to={"/renault-car-service-near-me"}>Book a service</Link>
-            </div>
-          </div>
+          ))}
+          
           <div className="col-span-1">
             <p className="text-sm font-semibold mb-5">Social</p>
             <div className="flex items-center justify-start space-x-5">
-              <Link to={"/https://www.facebook.com/ArkaRenaultTs/"}>
+              <a
+                target={"_blank"}
+                rel="noreferrer"
+                href={"https://www.facebook.com/ArkaRenaultTs/"}
+              >
                 <BsFacebook className="text-blue-500 h-6 w-6" />
-              </Link>
-              <Link to={"/https://twitter.com/arka_renault"}>
+              </a>
+              <a
+                target={"_blank"}
+                rel="noreferrer"
+                href={"https://twitter.com/arka_renault"}
+              >
                 <BsTwitter className="text-cyan-500 h-6 w-6" />
-              </Link>
-              <Link to={"/https://www.instagram.com/arkarenault/"}>
+              </a>
+              <a
+                target={"_blank"}
+                rel="noreferrer"
+                href={"https://www.instagram.com/arkarenault/"}
+              >
                 <FiInstagram className="text-rose-500 h-6 w-6" />
-              </Link>
-              <Link to={"/https://youtube.com/@arkarenault3883"}>
+              </a>
+              <a
+                target={"_blank"}
+                rel="noreferrer"
+                href={"https://youtube.com/@arkarenault3883"}
+              >
                 <BsYoutube className="text-red-600 h-6 w-6" />
-              </Link>
-              <Link to={"/https://www.linkedin.com/company/arkarenault"}>
+              </a>
+              <a
+                target={"_blank"}
+                rel="noreferrer"
+                href={"https://www.linkedin.com/company/arkarenault"}
+              >
                 <BsLinkedin className="text-sky-600 h-5 w-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

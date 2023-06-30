@@ -6,6 +6,7 @@ import Popup from "./components/popup/Popup";
 import Loading from "./components/loading/Loading";
 import { AuthContext } from "./context/AuthContext";
 import Thankyou from "./pages/Thankyou";
+import Quote from "./pages/forms/Quote";
 
 
 const Home = lazy(() => import("./pages/Home"));
@@ -63,6 +64,7 @@ function App() {
             <Route path="/renault-car-service-near-me" element={<Service />} />
             <Route path="/finance" element={<Finance />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/get-a-quote" element={<Quote />} />
             <Route path="/register-a-complaint" element={<Complaint />} />
             <Route path="/privacy-and-legal" element={<Legal />} />
             <Route path="/about-us" element={<About />} />

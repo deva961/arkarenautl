@@ -1,10 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import InterestSvg from "../../assets/images/svg/interest.svg";
 import { Bars3CenterLeftIcon } from "@heroicons/react/24/outline";
 import { HiChevronRight } from "react-icons/hi";
 import MobileHeader from "./MobileHeader";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { carSpecs } from "../../constants/specs";
 const navigation = {
   categories: [
@@ -27,6 +27,16 @@ function Header() {
   const [open, setOpen] = useState(false);
   const [veh, setVeh] = useState(false);
   const [car, setCar] = useState(true);
+
+  const { pathname } = useLocation();
+  const location = useLocation();
+
+  console.log(location)
+  useEffect(() => {
+    console.log(pathname)
+    
+  },[pathname])
+
   return (
     <div className="bg-white">
       {/* Mobile menu */}
@@ -59,8 +69,8 @@ function Header() {
               {/* Flyout menus */}
               <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="flex h-full space-x-8">
-                  {navigation.categories.map((category) => (
-                    <Popover key={category.name} className="flex">
+                  {navigation.categories.map((category,index) => (
+                    <Popover key={index} className="flex">
                       {({ open }) => (
                         <>
                           <div className="relative flex">
@@ -102,7 +112,7 @@ function Header() {
                                     </div>
                                     <div className="flex items-center">
                                       <HiChevronRight className="w-5 h-5" />
-                                      <Link to={"/register-a-complaint"} className="font-semibold">Register a complaint</Link>
+                                      <Link to={"/get-a-quote"} className="font-semibold">Get a Quote</Link>
                                     </div>
                                     {/* <div className="flex items-center">
                                       <HiChevronRight className="w-5 h-5" />
@@ -112,10 +122,10 @@ function Header() {
                                   <div className="flex-grow flex space-x-5 ml-12">
                                     <div className="h-48 bg-gray-100 w-px"></div>
                                     <div className="flex items-center space-x-5 px-7 lg:px-0">
-                                      {carSpecs?.map((item) => (
+                                      {carSpecs?.map((item, index) => (
                                         <Link
                                           to={`/listings/${item.id}`}
-                                          key={item.id}
+                                          key={index}
                                         >
                                           <img
                                             src={item.pic}

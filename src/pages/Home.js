@@ -74,7 +74,7 @@ const LookingFor = () => {
         </div>
 
         <div className="col-span-1 border border-px py-3">
-          <Link to={"/renault-cars-hyderabad"} className="flex items-center justify-center space-x-3">
+          <Link to={"/get-a-quote"} className="flex items-center justify-center space-x-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 30 30"
@@ -85,7 +85,7 @@ const LookingFor = () => {
                 d="M22.82 24.427c0-.66-.39-1.71-1.261-3.6-.87 1.8-1.26 2.91-1.26 3.6 0 .9.6 1.29 1.26 1.29s1.26-.36 1.26-1.29zm-3.751.09c0-.96.72-2.88 1.95-5.13h1.08c1.2 2.34 1.95 4.2 1.95 5.13 0 1.32-1.17 2.37-2.49 2.37-1.35 0-2.49-1.05-2.49-2.37zm-5.52-13.681c-.75 0-1.17.42-1.17 1.2 0 .75.42 1.14 1.17 1.14.78 0 1.17-.39 1.17-1.14 0-.78-.39-1.2-1.17-1.2zm0 3.54c-1.29 0-2.37-1.05-2.37-2.34 0-1.05.69-1.92 1.65-2.22V3.125h1.23v6.63c1.08.21 1.86 1.14 1.86 2.28a2.35 2.35 0 0 1-2.37 2.341zm1.74-8.13 2.49-.99 4.26 11.28-.93.63h-4.02l-3.66 1.38c-3.3 1.32-5.19.39-6.481-3.18l-.15-.39c-1.26-3.3-.36-5.28 2.82-6.6l1.95-.81v1.32l-1.53.63c-2.49 1.02-3.03 2.34-2.1 5.07l.15.42c.93 2.73 2.4 3.45 4.98 2.4l3.63-1.41h3.9l-3.48-9.18-1.83.72v-1.29z"
               ></path>
             </svg>
-            <p className="text-xs font-bold">Download Brochure</p>
+            <p className="text-xs font-bold">Get a Quote</p>
           </Link>
         </div>
 

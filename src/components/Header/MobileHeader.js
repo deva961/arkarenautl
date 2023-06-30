@@ -67,40 +67,32 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                       {veh === false && (
                         <div className="px-4">
                           <div
-                            onClick={(e) => setVeh(!veh)}
+                            onClick={() => setVeh(!veh)}
                             className="flex items-center justify-between focus:outline-none outline-none uppercase mb-6 text-sm font-semibold tracking-wide"
                           >
-                            <p>Vehicles</p>
-                            <p>
-                              <ChevronRightIcon className="h-4 w-4" />
-                            </p>
+                            Vehicles
+                            <ChevronRightIcon className="h-4 w-4" />
                           </div>
 
                           <Link
                             to={"/finance"}
                             className="flex items-center justify-between focus:outline-none outline-none uppercase mb-7 text-sm font-semibold tracking-wide"
                           >
-                            <p>Finance</p>
-                            <p>
-                              <ChevronRightIcon className="h-4 w-4" />
-                            </p>
+                            Finance
                           </Link>
 
                           <Link
                             to={"/car-offers"}
                             className="flex items-center justify-between focus:outline-none outline-none uppercase mb-7 text-sm font-semibold tracking-wide"
                           >
-                            <p>Offers</p>
+                            Offers
                           </Link>
 
                           <Link
                             to={"/contact"}
                             className="flex items-center justify-between focus:outline-none outline-none uppercase mb-7 text-sm font-semibold tracking-wide"
                           >
-                            <p>Contact us</p>
-                            <p>
-                              <ChevronRightIcon className="h-4 w-4" />
-                            </p>
+                            Contact us
                           </Link>
                         </div>
                       )}
@@ -133,11 +125,11 @@ function MobileHeader({ open, setOpen, veh, setVeh, car, setCar }) {
                                 </p>
                               </button>
                               {car === true &&
-                                cars?.map((item) => (
+                                cars?.map((item, index) => (
                                   <Link
                                     to={`/listings/${item.link}`}
                                     className="flex items-center w-full px-4 mb-1"
-                                    key={item.id}
+                                    key={index}
                                   >
                                     <img
                                       src={item.img}
